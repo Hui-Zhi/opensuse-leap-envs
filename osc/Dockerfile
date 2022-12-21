@@ -14,6 +14,6 @@ RUN echo 'alias osc-opensuse="osc -A https://api.opensuse.org"' >> ~/.bashrc
 #7 794.2  Solution 1: downgrade of rpm-4.14.3-150300.46.1.aarch64 to rpm-4.14.1-29.46.aarch64
 #7 794.2  Solution 2: do not install osc-0.172.0-3.26.1.noarch
 #7 794.2  Solution 3: break osc-0.172.0-3.26.1.noarch by ignoring some of its dependencies
-RUN zypper --non-interactive in rpm=4.14.3-150300.46.1 osc build which vim sudo obs-service-format_spec_file
+RUN zypper --non-interactive in rpm=4.14.3-150300.46.1 osc build python3-py2pack which vim sudo obs-service-format_spec_file
 RUN zypper --non-interactive in less
 RUN zypper --non-interactive in rpmlint
